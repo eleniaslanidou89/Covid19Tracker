@@ -1,6 +1,6 @@
 <template>
   <main v-if="!loading">
-    show data
+    <DataTitle :text="title" :dataDate="dataDate" />
   </main>
   <main class="flex flex-col align-center justify-center text-center" v-else>
     <div class="text-gray-500 text-3xl mt-10 mb-6">fetching data</div>
@@ -9,14 +9,17 @@
 </template>
 
 <script>
+import DataTitle from '@/components/DataTitle'
 export default {
   name: "Home",
-  components: {},
+  components: {
+    DataTitle,
+  },
   data() {
     return {
       loading: true,
-      title: "Global",
-      dataDate: "",
+      title: 'Global',
+      dataDate: '',
       stats: {},
       countries: [],
       loadingImage: require("../assets/hourglass.gif"),
@@ -34,7 +37,8 @@ export default {
     this.dataDate = data.Date;
     this.stats = data.Global;
     this.countries = data.Countries;
-    this.loading = false;
+    this.loading = false;console.log(dataDate)
   },
+  
 };
 </script>
