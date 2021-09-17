@@ -1,6 +1,7 @@
 <template>
   <main v-if="!loading">
     <DataTitle :text="title" :dataDate="dataDate" />
+    <DataBoxes :stats="stats" />
   </main>
   <main class="flex flex-col align-center justify-center text-center" v-else>
     <div class="text-gray-500 text-3xl mt-10 mb-6">fetching data</div>
@@ -10,10 +11,12 @@
 
 <script>
 import DataTitle from '@/components/DataTitle'
+import DataBoxes from '@/components/DataBoxes'
 export default {
   name: "Home",
   components: {
     DataTitle,
+    DataBoxes,
   },
   data() {
     return {
@@ -37,7 +40,7 @@ export default {
     this.dataDate = data.Date;
     this.stats = data.Global;
     this.countries = data.Countries;
-    this.loading = false;console.log(dataDate)
+    this.loading = false;
   },
   
 };
