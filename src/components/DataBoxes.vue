@@ -1,6 +1,6 @@
 <template>
   <div class="grid md:grid-cols-2 gap-4">
-    <!-- Box 1 --> 
+    <!-- Box 1 -->
     <div class="shadow-md bg-blue-100 p-10 text-center rounded">
       <h3 class="text-3xl text-blue-900 font-bold mb-4">Cases</h3>
 
@@ -8,7 +8,7 @@
         <span class="font-bold">New:</span>
         {{ stats.NewConfirmed }}
         <span class="font-bold">Total:</span>
-        {{ stats.TotalConfirmed}}
+        {{ stats.TotalConfirmed }}
       </div>
     </div>
     <!--Box 2 -->
@@ -19,7 +19,7 @@
         <span class="font-bold">New:</span>
         {{ stats.NewDeaths }}
         <span class="font-bold">Total:</span>
-        {{ stats.TotalDeaths}}
+        {{ stats.TotalDeaths }}
       </div>
     </div>
   </div>
