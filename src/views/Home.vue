@@ -3,6 +3,12 @@
     <DataTitle :text="title" :dataDate="dataDate" />
     <DataBoxes :stats="stats" />
     <Countries @get-country="getCountryData" :countries="countries" />
+    <div
+      v-if="stats.Country"
+      class="button bg-green-700 text-white rounded p-3 mt-10 focus:outline-none hover:bg-green-600"
+    >
+      Clear Country
+    </div>
   </main>
   <main class="flex flex-col align-center justify-center text-center" v-else>
     <div class="text-gray-500 text-3xl mt-10 mb-6">fetching data</div>
